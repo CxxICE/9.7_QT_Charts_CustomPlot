@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 	connect(this, &MainWindow::sig_end_calculation, this, &MainWindow::show_graph);
 
-	graph = new QLineSeries();
+	graph = new QLineSeries(this);
 	chart = new QChart();
 	chartView = new QChartView(chart);
 
@@ -24,8 +24,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 
-	delete graph;
-	delete chart;
+	//delete graph;
+	//delete chart;
 	delete chartView;
 }
 
